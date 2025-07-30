@@ -38,10 +38,11 @@ export const FooterSection = (): JSX.Element => {
     {
       title: "Address",
       links: [
-        { text: "AlokaSoft SOLUTIONS INC", url: "#" },
-                { text: "1550 WATERS RIDGE DR BLDG1 STE 300 LEWISVILLE, TX 75057", url: "#" },
-        { text: "E-Mail: info@AlokaSoft.com", url: "#" },
-        { text: "Phone: ‪+1 (469) 427-0751", url: "#" },
+        { text: "Ven Reddy", url: "#" },
+        { text: "345 scotch creek rd,coppell,DFW,USA 75019", url: "#" },
+        { text: "E-Mail: venreddysnow@gmail.com", url: "#" },
+        { text: "Company Name:alokasoftware.com", url: "#" },
+        { text: "Phone: 224-228-3646", url: "#" },
       ],
     },
     {
