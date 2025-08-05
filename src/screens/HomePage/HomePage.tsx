@@ -11,10 +11,21 @@ import { FaqSection } from "./sections/FaqSection";
 import { KeyFeatureMobile } from "./sections/KeyFeatureMobile";
 import { ChevronUp } from 'lucide-react';
 import  { Button } from "../../components/ui/button";
+import { ContactFormSection } from "./sections/ContactFormSection";
 
 
 import company from "../../assets/Pic.png";
 import companies from "../../assets/Pict.png";
+import be from '../../assets/be.jpg';
+import dail from '../../assets/dailmler.png';
+import download from '../../assets/download.jpg';
+import dtcc from '../../assets/dtcc.png';
+import gat from '../../assets/gat.png';
+import ge from '../../assets/ge.png';
+import ver from '../../assets/ver.png';
+import visa from '../../assets/visa.jpg';
+import wu from '../../assets/wu.png';
+import w from '../../assets/w.jpg';
 
 
 interface WindowSize {
@@ -138,6 +149,7 @@ export const HomePage = (): JSX.Element => {
       <TestimonialCarouselSection testimonialRef={refs.testimonial} />
     ),
     faq: <FaqSection faqRef={refs.faq} />,
+     contactform: <ContactFormSection />,
   };
 
   // Desktop-specific layout
@@ -153,6 +165,7 @@ export const HomePage = (): JSX.Element => {
         handleNavClick={handleNavClick}
       />
       {commonSections.testimonials}
+            {commonSections.contactform}
       {commonSections.faq}
       {commonSections.footer}
     </div>
@@ -171,6 +184,7 @@ export const HomePage = (): JSX.Element => {
         <TrialOfferSection />
         <KeyFeatureMobile  keyFeaturesRef={refs.keyFeatures}/>
         <SolutionOverviewSection  ourServicesRef={refs.ourServices} />
+        {commonSections.contactform}
         {commonSections.faq}
         
       </main>
@@ -194,16 +208,16 @@ const CompanyStats = () => (
         160,000+ customers in over 120 countries grow their businesses with AlokaSoft
       </p>
       
-      <img
-                   className="relative max-w-[1204px] w-full flex-[0_0_auto]"
-                  alt="Logo"
-                  src={company}
-                />
-                 <img
-                   className="relative max-w-[1204px] w-full flex-[0_0_auto]"
-                  alt="Logo"
-                  src={companies}
-                />
+    <div className="grid grid-cols-4 gap-6 w-full justify-items-center">
+                <img className='' alt='Logo' src={wu} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={visa} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={ver} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={ge} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={gat} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={dtcc} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={dail} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                <img className='' alt='Logo' src={be} style={{ height: 60, width: 200, objectFit: 'contain' }} />
+                </div>
     </div>
   </section>
 );

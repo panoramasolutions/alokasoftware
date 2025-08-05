@@ -2,53 +2,34 @@ import React from "react";
 import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
+import deep from '../../../../assets/deep.png';
+import future from '../../../../assets/future.png';
+import tr from '../../../../assets/true.png';
+import ai from '../../../../assets/AI.png';
 
 export const ValuePropositionSection = ({aboutusRef}): JSX.Element => {
-  // Responsive feature cards data
-  // const featureCards = [
-  //   {
-  //     iconDesktop: "https://c.animaapp.com/md8qit7hIsaPL2/img/vector-1.svg",
-  //     iconMobile: "https://c.animaapp.com/mda992oeRqV2dl/img/vector-1.svg",
-  //     title: "AI-Driven Forecasts",
-  //     description:
-  //       "Harness the unmatched power of artificial intelligence with AlokaSoft. Dive deep into predictive analytics, anticipate market trends, and stay steps ahead of your competition. Make informed decisions backed by data-driven insights",
-  //   },
-  //   {
-  //     iconDesktop: "https://c.animaapp.com/md8qit7hIsaPL2/img/vector-5.svg",
-  //     iconMobile: "https://c.animaapp.com/mda992oeRqV2dl/img/vector-30.svg",
-  //     title: "Connect & Streamline",
-  //     description:
-  //       "AlokaSoft seamlessly integrates with your favorite business tools, CRMs, and platforms. Experience a unified analytics platform that bridges the gaps in your data ecosystem, ensuring you have a holistic view of your operations",
-  //   },
-  //   {
-  //     iconDesktop: "https://c.animaapp.com/md8qit7hIsaPL2/img/vector-2.svg",
-  //     iconMobile: "https://c.animaapp.com/mda992oeRqV2dl/img/vector-4.svg",
-  //     title: "Instant Insights",
-  //     description:
-  //       "In the fast-paced world of business, every second counts. AlokaSoft processes data in real-time, ensuring you're always working with the most up-to-date information. React to changes as they happen and pivot your strategies instantly.",
-  //   },
-  // ];
+ 
 
     const featureCards = [
-    {
-      icon: "https://c.animaapp.com/mdd04i9koSfWJV/img/vector-32.svg",
-      title: "Deep Industry Insight",
-      description:
-        "We blend domain expertise with cutting-edge tech—AI, ML, and cybersecurity.",
-    },
-    {
-      icon: "https://c.animaapp.com/mdd04i9koSfWJV/img/vector-45.svg",
-      title: "True Client Partnership",
-      description:
-        "We work as an extension of your team to solve real-world business challenges.",
-    },
-    {
-      icon: "https://c.animaapp.com/mdd04i9koSfWJV/img/vector-36.svg",
-      title: "Future-Ready Approach",
-      description:
-        "24/7 monitoring, predictive maintenance, and roadmaps designed for growth.",
-    },
-  ];
+     {
+       icon: deep,
+       title: 'Deep Industry Insight',
+       description:
+         'We blend domain expertise with cutting-edge tech—AI, ML, and cybersecurity.',
+     },
+     {
+       icon: tr,
+       title: 'True Client Partnership',
+       description:
+         'We work as an extension of your team to solve real-world business challenges.',
+     },
+     {
+       icon: future,
+       title: 'Future-Ready Approach',
+       description:
+         '24/7 monitoring, predictive maintenance, and roadmaps designed for growth.',
+     },
+   ];
   return (
     <section ref={aboutusRef} className="flex flex-col items-center gap-[60px] pt-12 pb-12 px-8 sm:pt-32 sm:pb-12 sm:px-8 px-5 py-[45px] relative self-stretch w-full flex-[0_0_auto] bg-white">
       <div className="flex flex-col max-w-[1204px] items-center gap-[60px] relative w-full flex-[0_0_auto]">
@@ -59,18 +40,18 @@ export const ValuePropositionSection = ({aboutusRef}): JSX.Element => {
               variant="outline"
               className="flex items-center gap-2 px-3 py-2 bg-white rounded-[20px] border border-solid border-[#b6bbcd] shadow-shadow-to-bot-neutral-1"
             >
-              <div className="relative w-5 h-5">
+               <div className="relative w-5 h-5">
                 {/* Desktop/Tablet icon */}
                 <img
                   className="absolute w-[18px] h-[17px] top-0.5 left-px sm:block hidden"
                   alt="Vector"
-                  src="https://c.animaapp.com/md8qit7hIsaPL2/img/vector-18.svg"
+                  src={ai}
                 />
                 {/* Mobile icon */}
                 <img
                   className="absolute w-[18px] h-[17px] top-0.5 left-px sm:hidden block"
                   alt="Vector"
-                  src="https://c.animaapp.com/mda992oeRqV2dl/img/vector-2.svg"
+                  src={ai}
                 />
               </div>
               <span className="font-body-base-medium font-[number:var(--body-base-medium-font-weight)] text-[#4b5162] text-[length:var(--body-base-medium-font-size)] tracking-[var(--body-base-medium-letter-spacing)] leading-[var(--body-base-medium-line-height)] [font-style:var(--body-base-medium-font-style)]">

@@ -8,7 +8,7 @@ import bigImage from '../../../../assets/image.png';
 export const HeroSection = ({ handleNavClick,}): JSX.Element => {
     const [showPopup, setShowPopup] = useState(false);
   return (
-    <section className="flex flex-col items-center pt-20 pb-18 px-8 sm:pt-20 sm:pb-20 sm:px-8 px-5 py-[45px] relative self-stretch w-full flex-[0_0_auto] bg-white">
+    <section className="flex flex-col items-center pt-20 pb-18 px-8 sm:pt-16 sm:pb-12 sm:px-8 px-5 py-[45px] relative self-stretch w-full flex-[0_0_auto] bg-white">
       <div className="flex flex-col max-w-[1204px] items-center gap-[60px] sm:gap-[60px] gap-8 relative w-full flex-[0_0_auto]">
         <div className="flex flex-col max-w-[860px] items-center gap-10 sm:gap-10 gap-8 relative w-full flex-[0_0_auto]">
           <div className="flex flex-col items-center gap-5 self-stretch w-full relative flex-[0_0_auto]">
@@ -55,80 +55,14 @@ export const HeroSection = ({ handleNavClick,}): JSX.Element => {
                  Explore Our Services
                 </span>
               </Button>
-              {/* <Button
-                className="items-center justify-center gap-2 px-5 py-3 bg-[#ffffff1a] rounded-xl overflow-hidden border border-solid border-[#b6bbcd] backdrop-blur-[6px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(6px)_brightness(100%)] inline-flex relative flex-[0_0_auto]"
-                variant="outline"
-                  onClick={() => setShowPopup(true)}
-              >
-                <img
-                  className="relative w-[18px] h-[18px]"
-                  alt="Play icon"
-                  src="https://c.animaapp.com/md8qit7hIsaPL2/img/icon-play.svg"
-                />
-                <span className="font-button-small-bold font-[number:var(--button-small-bold-font-weight)] text-[#4b5162] text-[length:var(--button-small-bold-font-size)] tracking-[var(--button-small-bold-letter-spacing)] leading-[var(--button-small-bold-line-height)] whitespace-nowrap [font-style:var(--button-small-bold-font-style)]">
-                  Get a Free Strategy Call
-                </span>
-              </Button>
-              {showPopup && (
-                              <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50'>
-                                <div className='bg-white rounded-xl p-8 flex flex-col items-center gap-4 shadow-lg relative'>
-                                  <button
-                                    className='absolute top-2 right-2 text-gray-500 hover:text-gray-700 w-8'
-                                    onClick={() => setShowPopup(false)}
-                                  >
-                                    &times;
-                                  </button>
-                                  <img
-                                    src={whatsup}
-                                    alt='Welcome'
-                                    className='w-[200px] h-[200px]'
-                                  />
-                                  <div className='text-xl font-bold text-[#343844]'>
-                                    Whatsapp us on : +91 9096806080”
-                                  </div>
-                                </div>
-                              </div>
-                            )} */}
+              
             </div>
             {/* Mobile */}
             <div className="sm:hidden flex flex-col items-start gap-3 w-full">
               <Button className="w-full py-3 bg-[#248799] rounded-xl font-button-base-bold font-[number:var(--button-base-bold-font-weight)] text-white text-[length:var(--button-base-bold-font-size)] tracking-[var(--button-base-bold-letter-spacing)] leading-[var(--button-base-bold-line-height)] [font-style:var(--button-base-bold-font-style)]"  onClick={() => handleNavClick('Our Services')} >
                 Explore Our Services
               </Button>
-              {/* <Button
-                variant="outline"
-                className="w-full py-3 bg-[#ffffff1a] rounded-xl border-[#b6bbcd] backdrop-blur-[6px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(6px)_brightness(100%)] flex items-center justify-center gap-2"
-                  onClick={() => setShowPopup(true)}  
-              >
-                <img
-                  className="w-[18px] h-[18px]"
-                  alt="Play icon"
-                  src="https://c.animaapp.com/mda992oeRqV2dl/img/l-icon-2.svg"
-                />
-                <span className="font-button-small-bold font-[number:var(--button-small-bold-font-weight)] text-[#4b5162] text-[length:var(--button-small-bold-font-size)] tracking-[var(--button-small-bold-letter-spacing)] leading-[var(--button-small-bold-line-height)] [font-style:var(--button-small-bold-font-style)]">
-                  Get a Free Strategy Call
-                </span>
-              </Button>
-              {showPopup && (
-                              <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50'>
-                                <div className='bg-white rounded-xl p-8 flex flex-col items-center gap-4 shadow-lg relative'>
-                                  <button
-                                    className='absolute top-2 right-2 text-gray-500 hover:text-gray-700 w-8'
-                                    onClick={() => setShowPopup(false)}
-                                  >
-                                    &times;
-                                  </button>
-                                  <img
-                                    src={whatsup}
-                                    alt='Welcome'
-                                    className='w-[200px] h-[200px]'
-                                  />
-                                  <div className='text-xl font-bold text-[#343844]'>
-                                    Whatsapp us on : +91 9096806080”
-                                  </div>
-                                </div>
-                              </div>
-                            )} */}
+              
             </div>
           </div>
         </div>

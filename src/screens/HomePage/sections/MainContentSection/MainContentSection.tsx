@@ -8,6 +8,33 @@ import company from '../../../../assets/Pic.png';
 import companies from '../../../../assets/Pict.png';
 import whatsup from '../../../../assets/w.jpg';
 import bigImage from '../../../../assets/image.png';
+import be from '../../../../assets/be.jpg';
+import dail from '../../../../assets/dailmler.png';
+import download from '../../../../assets/download.jpg';
+import dtcc from '../../../../assets/dtcc.png';
+import gat from '../../../../assets/gat.png';
+import ge from '../../../../assets/ge.png';
+import ver from '../../../../assets/ver.png';
+import visa from '../../../../assets/visa.jpg';
+import wu from '../../../../assets/wu.png';
+import w from '../../../../assets/w.jpg';
+import ai from '../../../../assets/AI.png';
+import deep from '../../../../assets/deep.png';
+import future from '../../../../assets/future.png';
+import tr from '../../../../assets/true.png';
+import big from '../../../../assets/big.png';
+import mas from '../../../../assets/mas.png';
+import l from '../../../../assets/l.png';
+import p from '../../../../assets/p.png';
+import m from '../../../../assets/m.png';
+import secure from '../../../../assets/secure.png';
+import smart from '../../../../assets/smart.png';
+import data from '../../../../assets/data.png';
+import auto from '../../../../assets/auto.png';
+import one from '../../../../assets/1.png';
+import two from '../../../../assets/2.png';
+import three from '../../../../assets/3.png';
+
 
 
 import { ChevronRightIcon } from "lucide-react";
@@ -28,85 +55,99 @@ export const MainContentSection = ({
   faqRef,
   handleNavClick,
 }: any) => {
-  // Data for the "About Us" feature cards
   const featureCards = [
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/vector-32.svg',
+      icon: deep,
       title: 'Deep Industry Insight',
       description:
         'We blend domain expertise with cutting-edge tech—AI, ML, and cybersecurity.',
     },
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/vector-45.svg',
+      icon: tr,
       title: 'True Client Partnership',
       description:
         'We work as an extension of your team to solve real-world business challenges.',
     },
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/vector-36.svg',
+      icon: future,
       title: 'Future-Ready Approach',
       description:
         '24/7 monitoring, predictive maintenance, and roadmaps designed for growth.',
     },
   ];
 
+  const featureCard1s = [
+    {
+      icon: deep,
+      title: 'End-to-End Solutions',
+      description:
+        'We provide complete IT solutions tailored to your business—from strategy and architecture to development, deployment, and ongoing support. Our core focus areas include Cloud Technologies, DevSecOps, and scalable digital infrastructure.',
+    },
+    {
+      icon: future,
+      title: 'Staffing',
+      description:
+        'We help companies scale their teams with highly skilled professionals across various technologies. Whether its short-term project support or long-term resource needs, we provide reliable talent for all the major technologies.',
+    },
+  ];
+
   // Data for the service cards
   const serviceCards = [
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-3.svg',
+      icon: one,
+      title: 'AI/ML',
+      description:
+        'Deploy cutting-edge AI/ML solutions to automate decision-making, detect patterns, and enhance user experience with predictive insights',
+    },
+    {
+      icon: two,
       title: 'Cloud Strategy & Consulting',
       description:
         'From total visioning to tactical cloud roadmaps, cost modeling, and vendor-neutral governance across AWS, Azure & GCP.',
     },
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-6.svg',
+      icon: three,
       title: 'Data Engineering',
       description:
-        "We provide support for any models ranging from data analysis,data engineering to even data science.",
+        'We provide support for any models ranging from data analysis,data engineering to even data science.',
     },
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-5.svg',
+      icon: three,
       title: 'Full-Stack Development',
       description:
-        "Build robust end to end solutions in any full stack frameworks like Java, Dotnet, MEAN, MERN etc.",
+        'Build robust end to end solutions in any full stack frameworks like Java, Dotnet, MEAN, MERN etc.',
     },
 
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-6.svg',
+      icon: one,
       title: 'Python Expert',
       description:
         'Develop robust, scalable, and secure backend systems, automate business tasks, and build APIs using industry-best Python practices',
     },
 
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-6.svg',
-      title: 'AI/ML',
-      description:
-        'Deploy cutting-edge AI/ML solutions to automate decision-making, detect patterns, and enhance user experience with predictive insights',
-    },
-    {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-1.svg',
+      icon: two,
       title: 'Business Intelligence(Power BI)',
       description:
         'Leverage Power BI dashboards and reports to gain visual insights, monitor KPIs, and drive smarter business strategies',
     },
 
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1.svg',
+      icon: two,
       title: 'Automation & DevOps',
       description:
         'Streamline delivery pipelines, cut errors, and embrace agility with full-stack CI/CD and IaC.',
     },
 
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-1.svg',
+      icon: one,
       title: 'Business Development',
       description:
-        "Receive automated insights and recommendations tailored to your business needs. Let AlokaSoft's AI guide your strategies.",
+        "Receive automated insights and recommendations tailored to your business needs. Let VTECHNOCLOUD's AI guide your strategies.",
     },
 
     {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/component-1-2.svg',
+      icon: three,
       title: 'Networking & Infrastructure',
       description:
         'Architect resilient networks—wired, wireless, hybrid—designed for performance and security.',
@@ -114,27 +155,7 @@ export const MainContentSection = ({
   ];
 
   // Data for the "How We Work" steps
-  const workSteps = [
-    {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/icon-credit-card-cursor-click.svg',
-      title: "Let's Talk Goals",
-      description: 'We dig deep to get your business + tech aligned.',
-    },
-    {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/vector-19.svg',
-      title: 'Plan Like Pros',
-      description: 'We map out what works—and what scales.',
-    },
-    {
-      icon: 'https://c.animaapp.com/mdd04i9koSfWJV/img/icon-world--transaction--transfer.svg',
-      title: 'Make It Happen',
-      description: 'From idea to impact, fast.',
-    },
-    {
-      title: 'Keep Getting Better',
-      description: "We don't stop. We fine-tune and future-proof.",
-    },
-  ];
+
 
   const features = [
     {
@@ -212,12 +233,7 @@ export const MainContentSection = ({
             className='relative w-full h-[556px] bg-[#387ff5] rounded-3xl overflow-hidden border border-solid border-[#f5f6f9] flex-1'
           >
             <div className='absolute w-full h-[556px] top-0 left-0 bg-[#6099f7] overflow-hidden'>
-              {/* <video
-                className='absolute w-full h-[556px] object-cover'
-                src={bannervideo}
-                controls
-                poster='https://c.animaapp.com/mdd04i9koSfWJV/img/image-2.png'
-              /> */}
+           
               <img src={bigImage} className='absolute w-full h-full object-cover' alt='Background' />
             </div>
           </div>
@@ -237,10 +253,10 @@ export const MainContentSection = ({
             <div className='flex flex-col items-center gap-4 w-full'>
               <Badge className='flex items-center gap-2 px-3 py-2 rounded-[20px] border border-solid border-[#b6bbcd] shadow-shadow-to-bot-neutral-1 bg-white'>
                 <div className='relative w-5 h-5'>
-                  <img
+                   <img
                     className='absolute w-[18px] h-[17px] top-0.5 left-px'
                     alt='Vector'
-                    src='https://c.animaapp.com/mdd04i9koSfWJV/img/vector-16.svg'
+                    src={ai}
                   />
                 </div>
                 <span className='font-body-base-medium text-[#343844]'>
@@ -310,8 +326,56 @@ export const MainContentSection = ({
           Clientele
           </p>
 
-          <img className='min-w-[1240px] w-full' alt='Logo' src={company} />
-          <img className='min-w-[1240px] w-full' alt='Logo' src={companies} />
+           <div className='grid grid-cols-4 gap-6 w-full justify-items-center'>
+            <img
+              className=''
+              alt='Logo'
+              src={wu}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={visa}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={ver}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={ge}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={gat}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={dtcc}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={dail}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+            <img
+              className=''
+              alt='Logo'
+              src={be}
+              style={{ height: 60, width: 200, objectFit: 'contain' }}
+            />
+          </div>
         </div>
       </section>
       {/* Our Services Section */}
@@ -366,22 +430,7 @@ export const MainContentSection = ({
             </div>
           </div>
           {/* Button and image always at the bottom after all cards */}
-          {/* <div className="flex flex-col w-full items-center justify-end gap-2 px-6 py-0 mt-8 relative">
-            <img
-              className="absolute w-full h-[263px] top-[-300px] left-0"
-              alt="Gradient mask"
-              src="https://c.animaapp.com/mdd04i9koSfWJV/img/gradient-mask.svg"
-            />
-            <Button
-              variant="outline"
-              className="px-5 py-3 rounded-xl border border-solid border-[#343844] backdrop-blur-[6px] z-10"
-              onClick={() => setShowAllServices(prev => !prev)}
-            >
-              <span className="font-button-small-bold text-[#343844]">
-                {showAllServices ? "Reduce applications" : "Explore more application"}
-              </span>
-            </Button>
-          </div> */}
+          
         </div>
       </section>
 
