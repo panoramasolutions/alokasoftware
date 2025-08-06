@@ -395,7 +395,39 @@ export const MainContentSection = ({
               </div>
             </div>
           </div>
-
+ <div className='flex flex-col justify-center gap-10 w-full'>
+            <div className='flex flex-wrap flex-col items-start justify-center gap-6 w-full'>
+              {featureCard1s.map((card, index) => (
+                <Card
+                  key={index}
+                  className='flex-1 min-w-[360px] min-h-[150px] border border-solid border-[#387ff5] shadow-shadow-to-bot-primary-4 rounded-xl'
+                >
+                  <CardContent className='flex flex-col items-start gap-2 px-5 py-4'>
+                    <div className='flex items-start gap-3 w-full'>
+                      <div className='flex items-start gap-2'>
+                        <div className='relative w-6 h-6'>
+                          <img
+                            className='absolute w-5 h-5 top-0.5 left-0.5'
+                            alt='Vector'
+                            src={card.icon}
+                          />
+                        </div>
+                      </div>
+                      <h3
+                        className='flex-1 font-body-base-semibold text-[#ffffff] font-semibold'
+                        style={{ fontWeight: 600 }}
+                      >
+                        {card.title}
+                      </h3>
+                    </div>
+                    <p className='opacity-80 font-body-base-regular text-[#ffffff]'>
+                      {card.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
           <div className='relative flex flex-wrap max-w-[1204px] items-start justify-center gap-8 pb-20 w-full'>
             <div className='flex flex-wrap items-start justify-center gap-8 flex-1'>
               {(showAllServices
@@ -435,7 +467,7 @@ export const MainContentSection = ({
       </section>
 
       {/* Key Features Section */}
-  <section className="relative w-full z-[3]">
+  <section className="relative w-full z-[3]"  ref={keyFeaturesRef}>
       <div className="flex flex-col md:flex-row w-full">
         {/* Left side - How we work */}
         <div className="w-full md:w-1/2 bg-[#d4f8ff] p-8 md:p-16 flex flex-col justify-center">

@@ -8,7 +8,7 @@ import {
   NavigationMenuTrigger,
 } from "../../../../components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "../../../../components/ui/sheet";
-import logo from "../../../../assets/logo.svg";
+import logo from "../../../../assets/Alokasoftlogo.png";
 // import { useWindowSize } from "../../../../hooks/useWindowSize";
 
 type NavigationBarSectionProps = {
@@ -60,7 +60,7 @@ export const NavigationBarSection = ({ handleNavClick }: NavigationBarSectionPro
               setIsOpen(false);
             }}
           >
-            <span className="relative w-fit mt-[-1.00px] font-button-base-medium text-[#343844] whitespace-nowrap">
+            <span className="relative w-fit mt-[-1.00px] font-button-base-medium text-[#ffffff] whitespace-nowrap">
               {item.label}
             </span>
           </NavigationMenuTrigger>
@@ -70,16 +70,16 @@ export const NavigationBarSection = ({ handleNavClick }: NavigationBarSectionPro
   );
 
   return (
-    <header className="flex items-center justify-around gap-[167px] px-8 py-0 relative self-stretch w-full flex-[0_0_auto] z-[2] bg-white">
+    <header className="flex items-center justify-around gap-[167px] px-8 py-0 relative self-stretch w-full flex-[0_0_auto] z-[2] bg-[#041025]">
       <div className="flex flex-col max-w-[1204px] items-start relative flex-1 grow border-b border-[#d1d5e2]">
         <div className="flex items-center justify-between px-0 py-5 relative self-stretch w-full flex-[0_0_auto]">
           <div className="inline-flex items-center gap-10 relative self-stretch flex-[0_0_auto]">
             {/* Logo */}
             <div className="relative w-[113.78px] h-12">
               <img
-                src={''}
+                src={logo}
                 alt=" Logo"
-                className="absolute w-[180] h-[6] top-[-30px] left-0"
+                className="absolute w-[180px] h-[6rem] top-[-27px] left-0"
               />
             </div>
 
@@ -97,7 +97,7 @@ export const NavigationBarSection = ({ handleNavClick }: NavigationBarSectionPro
           {isMobile && (
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="md:hidden  bg-white">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -106,7 +106,7 @@ export const NavigationBarSection = ({ handleNavClick }: NavigationBarSectionPro
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="absolute right-4 top-4"
+                    className="absolute right-4 top-4 bg-white"
                     onClick={() => setIsOpen(false)}
                   >
                     <X className="h-6 w-6" />
