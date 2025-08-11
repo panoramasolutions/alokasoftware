@@ -60,7 +60,7 @@ export const TrialOfferSection = (): JSX.Element => {
   if (isDesktop) {
     return (
       <section className="flex flex-col items-center gap-[60px] px-8 py-12 sm:py-20 sm:px-8 px-5 py-[60px] w-full bg-white">
-        <Card className="flex flex-col items-start gap-2 p-[60px] sm:p-[60px] pt-8 pb-[60px] px-8 bg-[#387ff5] rounded-[32px] max-w-[1204px] w-full border-none relative overflow-visible">
+        <Card className="flex flex-col items-start gap-2 p-[60px] sm:p-[60px] pt-8 pb-[60px] px-8 bg-[#617f63 ] rounded-[32px] max-w-[1204px] w-full border-none relative overflow-visible">
           
 
           <CardContent className="flex flex-wrap items-start gap-[40px] w-full p-0">
@@ -135,7 +135,7 @@ export const TrialOfferSection = (): JSX.Element => {
   // Mobile version (width <= 810px)
   return (
     <section className="flex flex-col items-center gap-[60px] py-[30px] w-full bg-white">
-      <Card className="flex-col items-start gap-2 pt-8 pb-[60px] px-8 bg-[#248799] max-w-[1204px] w-full border-none relative overflow-visible">
+      <Card className="flex-col items-start gap-2 pt-8 pb-[60px] px-8 bg-[#617f63] max-w-[1204px] w-full border-none relative overflow-visible">
         <CardContent className="flex flex-wrap items-start gap-[40px] w-full p-0">
           <div className="flex flex-col  items-start gap-10 flex-1">
             <h2 className="self-stretch font-heading-mobile-h1-bold font-[number:var(--heading-mobile-h1-bold-font-weight)] text-white text-[length:var(--heading-mobile-h1-bold-font-size)] tracking-[var(--heading-mobile-h1-bold-letter-spacing)] leading-[var(--heading-mobile-h1-bold-line-height)] [font-style:var(--heading-mobile-h1-bold-font-style)]">

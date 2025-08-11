@@ -158,7 +158,7 @@ export const ContactFormSection = (): JSX.Element => {
                       onChange={handleChange}
                       placeholder="First name"
                       required
-                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -172,7 +172,7 @@ export const ContactFormSection = (): JSX.Element => {
                       onChange={handleChange}
                       placeholder="Last name"
                       required
-                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export const ContactFormSection = (): JSX.Element => {
                     onChange={handleChange}
                     placeholder="you@company.com"
                     required
-                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                   />
                 </div>
 
@@ -203,7 +203,7 @@ export const ContactFormSection = (): JSX.Element => {
                     onChange={handleChange}
                     placeholder="+1 (555) 000-0000"
                     required
-                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                   />
                 </div>
 
@@ -218,7 +218,7 @@ export const ContactFormSection = (): JSX.Element => {
                     placeholder="Tell us about your project..."
                     required
                     rows={4}
-                    className="p-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5] focus:outline-none resize-none"
+                    className="p-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none resize-none"
                   />
                 </div>
 
@@ -230,11 +230,11 @@ export const ContactFormSection = (): JSX.Element => {
                     checked={formData.privacy}
                     onChange={handleChange}
                     required
-                    className="w-4 h-4 mt-1 border border-[#d0d5dd] rounded bg-white checked:bg-[#387ff5] checked:border-[#387ff5] focus:ring-1 focus:ring-[#387ff5]"
+                    className="w-4 h-4 mt-1 border border-[#d0d5dd] rounded bg-white checked:bg-[#617f63 ] checked:border-[#617f63] focus:ring-1 focus:ring-[#617f63]"
                   />
                   <label htmlFor="privacy" className="font-body-base-regular text-[#667085]">
                     You agree to our friendly{" "}
-                    <a href="#" className="underline text-[#387ff5]">
+                    <a href="#" className="underline text-[#617f63]">
                       privacy policy
                     </a>
                     .
@@ -244,7 +244,7 @@ export const ContactFormSection = (): JSX.Element => {
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-12 bg-[#387ff5] text-white rounded-lg font-button-base-bold hover:bg-[#387ff5]/90 disabled:opacity-50"
+                  className="w-full h-12 bg-[#617f63] text-white rounded-lg font-button-base-bold hover:bg-[#617f63 ]/90 disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}
                 </Button>
@@ -292,17 +292,17 @@ export const ContactFormSection = (): JSX.Element => {
                       {info.description}
                     </p>
                     {info.type === 'email' && (
-                      <a href={`mailto:${info.contact}`} className="font-body-base-semibold text-[#387ff5]">
+                      <a href={`mailto:${info.contact}`} className="font-body-base-semibold text-[#617f63]">
                         {info.contact}
                       </a>
                     )}
                     {info.type === 'phone' && (
-                      <a href={`tel:${info.contact}`} className="font-body-base-semibold text-[#387ff5]">
+                      <a href={`tel:${info.contact}`} className="font-body-base-semibold text-[#617f63]">
                         {info.contact}
                       </a>
                     )}
                     {info.type === 'address' && (
-                      <address className="font-body-base-semibold text-[#387ff5] not-italic whitespace-pre-line text-[12px]">
+                      <address className="font-body-base-semibold text-[#617f63] not-italic whitespace-pre-line text-[12px]">
                         {info.contact}
                       </address>
                     )}

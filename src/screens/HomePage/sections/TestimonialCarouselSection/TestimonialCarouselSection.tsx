@@ -157,8 +157,8 @@ export const TestimonialCarouselSection = ({ testimonialRef }: TestimonialSectio
                 `}
               >
                 <Card className={`
-                  h-[524px] rounded-[20px] border border-solid border-[#b6bbcd] backdrop-blur-2xl
-                  ${isDesktop ? 'bg-[#248799]' : ''}
+                  h-[400px] rounded-[20px] border border-solid border-[#b6bbcd] backdrop-blur-2xl
+                  ${isDesktop ? 'bg-[#617f63]' : 'bg-[#617f63]'}
                 `}>
                   <CardContent className={`
                     flex flex-col items-center h-full gap-5

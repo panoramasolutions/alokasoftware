@@ -200,7 +200,7 @@ export const SolutionOverviewSection = ({ourServicesRef}): JSX.Element => {
             {solutionCards.map((card, index) => (
               <Card
                 key={index}
-                className="flex flex-col min-h-[280px] border-[#b6bbcd] rounded-xl"
+                className="flex flex-col min-h-[280px] border-[#b6bbcd] rounded-xl "
               >
                 <CardContent className="flex flex-col gap-4 p-8 items-center">
                   <img
@@ -209,10 +209,10 @@ export const SolutionOverviewSection = ({ourServicesRef}): JSX.Element => {
                     src={card.icon}
                   />
                   <div className="flex flex-col h-[110px] gap-1 items-center">
-                    <h5 className="font-heading-desktop-h5-bold text-[#1c1f25] items-center">
+                    <h5 className="font-heading-desktop-h5-bold text-white items-center ">
                       {card.title}
                     </h5>
-                    <p className="opacity-80 font-body-base-regular text-[#4b5162] text-center">
+                    <p className="opacity-80 font-body-base-regular text-white text-center">
                       {card.description}
                     </p>
                   </div>

@@ -188,22 +188,22 @@ export const MainContentSection = ({
   return (
     <div className='flex flex-col items-start w-full relative z-[3]'>
       {/* Hero Section */}
-      <section className='flex flex-col items-center pt-28 pb-[34px] px-8 w-full bg-white'>
-        <div className='flex flex-row max-w-[1204px] items-center gap-[60px] w-full'>
+      <section className='flex flex-col items-center pt-12 pb-[34px] px-8 w-full bg-white'>
+        <div className='flex flex-row max-w-[1204px] items-start gap-[60px] w-full'>
           {/* Left Side: id=1 */}
           <div
             id="1"
-            className='flex flex-col max-w-[600px] items-start gap-10 w-full flex-shrink-0'
+            className='flex flex-col max-w-[600px] items-start gap-2 w-full flex-shrink-0'
           >
             <div className='flex flex-col items-start gap-5 w-full'>
               <div className='flex items-center gap-2  py-2  bg-white'>
                 
-                <span className='font-body-base-medium text-[#248799] text-[20px] font-bold'>
+                <span className='font-body-base-medium text-[#617f63] text-[20px] font-bold'>
                   Smarter IT. Stronger Business.
                 </span>
               </div>
 
-              <h1 className='text-[48px] font-bold font-inter font-heading-desktop-h1-bold text-[#343844] text-left'>
+              <h1 className='text-[42px] font-bold font-inter font-heading-desktop-h1-bold text-[#343844] text-left'>
                 Empowering Digital Acceleration with Smarter Cloud, Data &amp;
                 Automation Solutions
               </h1>
@@ -218,7 +218,7 @@ export const MainContentSection = ({
 
             <div className='flex items-start gap-3'>
               <Button
-                className='px-5 py-3 bg-[#248799] rounded-xl text-white'
+                className='px-5 py-3 bg-[#617f63] rounded-xl text-white'
                 onClick={() => handleNavClick('Our Services')}
               >
                 Explore Our Services
@@ -230,9 +230,9 @@ export const MainContentSection = ({
           {/* Right Side: id=2 */}
           <div
             id="2"
-            className='relative w-full h-[556px] bg-[#387ff5] rounded-3xl overflow-hidden border border-solid border-[#f5f6f9] flex-1'
+            className='relative w-full h-[450px] bg-[#617f63 ] rounded-3xl overflow-hidden border border-solid border-[#f5f6f9] flex-1'
           >
-            <div className='absolute w-full h-[556px] top-0 left-0 bg-[#6099f7] overflow-hidden'>
+            <div className='absolute w-full h-[450px] top-0 left-0 bg-[#6099f7] overflow-hidden'>
            
               <img src={bigImage} className='absolute w-full h-full object-cover' alt='Background' />
             </div>
@@ -287,7 +287,7 @@ export const MainContentSection = ({
               {featureCards.map((card, index) => (
                 <Card
                   key={index}
-                  className='flex-1 min-w-[360px] border border-solid border-[#387ff5] shadow-shadow-to-bot-primary-4 rounded-xl  shadow-[0px_2px_6px_#d4f8ff36,0px_13px_12px_#d4f8ff36,0px_24px_15px_#d4f8ff36,0px_40px_16px_#d4f8ff36,0px_62px_17px_#d4f8ff36]'
+                  className='flex-1 min-w-[360px] border border-solid border-[#617f63]  bg-white'
                 >
                   <CardContent className='flex flex-col items-start gap-2 px-5 py-4'>
                     <div className='flex items-start gap-3 w-full'>
@@ -381,7 +381,7 @@ export const MainContentSection = ({
       {/* Our Services Section */}
       <section
         ref={ourServicesRef}
-        className='flex flex-col items-center gap-[60px] pt-12 pb-28 px-8 w-full bg-[#248799]'
+        className='flex flex-col items-center gap-[60px] pt-12 pb-28 px-8 w-full bg-[#617f63]'
       >
         <div className='flex flex-col  gap-[60px] w-full max-w-[1204px]'>
           <div className='max-w-[800px] w-full flex flex-col items-center gap-8'>
@@ -400,7 +400,7 @@ export const MainContentSection = ({
               {featureCard1s.map((card, index) => (
                 <Card
                   key={index}
-                  className='flex-1 min-w-[360px] min-h-[150px] border border-solid border-[#387ff5] shadow-shadow-to-bot-primary-4 rounded-xl'
+                  className='flex-1 min-w-[360px] min-h-[150px] border border-solid border-[#617f63] rounded-xl'
                 >
                   <CardContent className='flex flex-col items-start gap-2 px-5 py-4'>
                     <div className='flex items-start gap-3 w-full'>
@@ -438,7 +438,7 @@ export const MainContentSection = ({
                   key={index}
                   className={`flex-1 min-w-[292px]  rounded-xl border border-solid ${
                     service.highlighted
-                      ? 'border-[#387ff5]'
+                      ? 'border-[#617f63 ]'
                       : 'border-[#b6bbcd]'
                   }`}
                 >
@@ -481,7 +481,7 @@ export const MainContentSection = ({
         text ever since the 1500s, when an unknown
           </p>
 
-          <Button className="w-32 h-10     px-5 py-3 bg-[#248799] rounded-xl text-white">
+          <Button className="w-32 h-10     px-5 py-3 bg-[#617f63] rounded-xl text-white">
         <span className="ml-2  " >Lorem Has</span>
         <ChevronRightIcon className="w-[11px] h-[11px] ml-2 " />
           </Button>
