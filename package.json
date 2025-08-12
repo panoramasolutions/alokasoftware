@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "homepage": "https://Rahuluifrontend.github.io/alokasoft",
+  "homepage": "https://panoramasolutions/alokasoftware.git",
   "source": "./index.html",
   "type": "module",
   "name": "alokasoft",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build ",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
