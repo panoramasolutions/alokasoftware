@@ -15,11 +15,11 @@ export const HeroSection = ({ handleNavClick,}): JSX.Element => {
             
             
               <span className="relative w-fit mt-[-1.00px] font-body-base-medium font-[number:var(--body-base-medium-font-weight)] text-[#4b5162] text-[length:var(--body-base-medium-font-size)] text-center tracking-[var(--body-base-medium-letter-spacing)] leading-[var(--body-base-medium-line-height)] whitespace-nowrap [font-style:var(--body-base-medium-font-style)]">
-                <span className="sm:inline hidden text-[#617f63] font-bold">
+                <span className="sm:inline hidden text-[#12A16B] font-bold">
                   Smarter IT. Stronger Business.
                 </span>
                 
-                <span className="sm:hidden inline text-[#617f63] font-bold">
+                <span className="sm:hidden inline text-[#12A16B] font-bold">
                   Smarter IT. Stronger Business.
                 </span>
               </span>
@@ -47,7 +47,7 @@ export const HeroSection = ({ handleNavClick,}): JSX.Element => {
             {/* Desktop/Tablet */}
             <div className="sm:flex hidden items-start gap-3">
               <Button
-                className="items-center justify-center px-5 py-3 bg-[#617f63] rounded-xl overflow-hidden inline-flex relative flex-[0_0_auto]"
+                className="items-center justify-center px-5 py-3 bg-[#12A16B] rounded-xl overflow-hidden inline-flex relative flex-[0_0_auto]"
                 variant="default"
              onClick={() => handleNavClick('Our Services')} 
               >
@@ -59,7 +59,7 @@ export const HeroSection = ({ handleNavClick,}): JSX.Element => {
             </div>
             {/* Mobile */}
             <div className="sm:hidden flex flex-col items-start gap-3 w-full">
-              <Button className="w-full py-3 bg-[#617f63] rounded-xl font-button-base-bold font-[number:var(--button-base-bold-font-weight)] text-white text-[length:var(--button-base-bold-font-size)] tracking-[var(--button-base-bold-letter-spacing)] leading-[var(--button-base-bold-line-height)] [font-style:var(--button-base-bold-font-style)]"  onClick={() => handleNavClick('Our Services')} >
+              <Button className="w-full py-3 bg-[#12A16B] rounded-xl font-button-base-bold font-[number:var(--button-base-bold-font-weight)] text-white text-[length:var(--button-base-bold-font-size)] tracking-[var(--button-base-bold-letter-spacing)] leading-[var(--button-base-bold-line-height)] [font-style:var(--button-base-bold-font-style)]"  onClick={() => handleNavClick('Our Services')} >
                 Explore Our Services
               </Button>
               

@@ -12,7 +12,7 @@ import { KeyFeatureMobile } from "./sections/KeyFeatureMobile";
 import { ChevronUp } from 'lucide-react';
 import  { Button } from "../../components/ui/button";
 import { ContactFormSection } from "./sections/ContactFormSection";
-
+import { Toaster } from "react-hot-toast";
 
 import company from "../../assets/Pic.png";
 import companies from "../../assets/Pict.png";
@@ -73,7 +73,7 @@ const ScrollToTop = () => {
             z-50
             p-4
             rounded-full
-            bg-[#617f63]
+            bg-[#12A16B]
             text-white
             shadow-lg
           
@@ -119,6 +119,7 @@ export const HomePage = (): JSX.Element => {
     ourServices: useRef<HTMLDivElement>(null),
     testimonial: useRef<HTMLDivElement>(null),
     faq: useRef<HTMLDivElement>(null),
+    contactus: useRef<HTMLDivElement>(null),
   };
 
   // Window size hook for responsive layout
@@ -133,6 +134,7 @@ export const HomePage = (): JSX.Element => {
       "Our Services": "ourServices",
       "Testimonial": "testimonial",
       "FAQ": "faq",
+      "Contact us": "contactus",
     };
 
     const refKey = refMap[label];
@@ -144,17 +146,18 @@ export const HomePage = (): JSX.Element => {
   // Common sections that appear in both layouts
   const commonSections = {
     navigation: <NavigationBarSection handleNavClick={handleNavClick} />,
-    footer: <FooterSection />,
+    footer: <FooterSection handleNavClick={handleNavClick}/>,
     testimonials: (
       <TestimonialCarouselSection testimonialRef={refs.testimonial} />
     ),
     faq: <FaqSection faqRef={refs.faq} />,
-     contactform: <ContactFormSection />,
+     contactform: <ContactFormSection contactusRef={refs.contactus}/>,
   };
 
   // Desktop-specific layout
   const DesktopLayout = () => (
     <div className="flex flex-col w-full min-h-screen bg-white">
+      <Toaster position="top-right" />
       {commonSections.navigation}
       <MainContentSection
         keyFeaturesRef={refs.keyFeatures}
@@ -162,12 +165,13 @@ export const HomePage = (): JSX.Element => {
         ourServicesRef={refs.ourServices}
         testimonialRef={refs.testimonial}
         faqRef={refs.faq}
+        contactusRef={refs.contactus}
         handleNavClick={handleNavClick}
       />
       {commonSections.testimonials}
             {commonSections.contactform}
       {commonSections.faq}
-      {commonSections.footer}
+     <FooterSection   handleNavClick={handleNavClick}  />
     </div>
   );
 
@@ -184,11 +188,11 @@ export const HomePage = (): JSX.Element => {
         <TrialOfferSection />
         <KeyFeatureMobile  keyFeaturesRef={refs.keyFeatures}/>
         <SolutionOverviewSection  ourServicesRef={refs.ourServices} />
-        {commonSections.contactform}
+        <ContactFormSection  contactusRef={refs.contactus} />
         {commonSections.faq}
         
       </main>
-      {commonSections.footer}
+       <FooterSection   handleNavClick={handleNavClick}  />
     </div>
   );
 

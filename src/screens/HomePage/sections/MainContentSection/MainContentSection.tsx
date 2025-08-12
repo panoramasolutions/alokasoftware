@@ -19,8 +19,8 @@ import visa from '../../../../assets/visa.jpg';
 import wu from '../../../../assets/wu.png';
 import w from '../../../../assets/w.jpg';
 import ai from '../../../../assets/AI.png';
-import deep from '../../../../assets/deep.png';
-import future from '../../../../assets/future.png';
+import deep from '../../../../assets/deepwhite.png';
+import future from '../../../../assets/futurewhite.png';
 import tr from '../../../../assets/true.png';
 import big from '../../../../assets/big.png';
 import mas from '../../../../assets/mas.png';
@@ -81,13 +81,13 @@ export const MainContentSection = ({
       icon: deep,
       title: 'End-to-End Solutions',
       description:
-        'We provide complete IT solutions tailored to your business—from strategy and architecture to development, deployment, and ongoing support. Our core focus areas include Cloud Technologies, DevSecOps, and scalable digital infrastructure.',
+        'We deliver end-to-end IT solutions customized to your business needs — covering everything from strategy and architecture to development, deployment, and ongoing support. Our key expertise lies in Cloud Technologies, DevSecOps, and building scalable digital infrastructure.',
     },
     {
       icon: future,
       title: 'Staffing',
       description:
-        'We help companies scale their teams with highly skilled professionals across various technologies. Whether its short-term project support or long-term resource needs, we provide reliable talent for all the major technologies.',
+        'Scale smarter with our top-tier tech talent. From rapid project boosts to long-term expertise, we connect you with skilled professionals across all major technologies — when and where you need them',
     },
   ];
 
@@ -143,7 +143,7 @@ export const MainContentSection = ({
       icon: one,
       title: 'Business Development',
       description:
-        "Receive automated insights and recommendations tailored to your business needs. Let VTECHNOCLOUD's AI guide your strategies.",
+        "Receive automated insights and recommendations tailored to your business needs. Let Alokasoft's AI guide your strategies.",
     },
 
     {
@@ -159,24 +159,24 @@ export const MainContentSection = ({
 
   const features = [
     {
-      title: "Lorem Ipsum",
+      title: "Discovery & Understanding",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting",
+        "We begin by listening. Our team works closely with you to understand your business objectives, challenges, existing systems, and expectations. This forms the foundation for crafting tailored solutions.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Strategy & Roadmap",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting",
+        "Based on our findings, we design a detailed project plan and technology roadmap. This includes timelines, milestones, resource allocation, and a clear cost structure, ensuring transparency from day one.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Design & Development",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting",
+        "Our experts create intuitive designs and robust system architectures. Development follows agile methodologies, allowing us to adapt quickly to feedback and evolving needs.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Testing & Quality Assurance",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting",
+        "We rigorously test every solution for performance, security, and scalability. Our QA process ensures that the final product is stable, secure, and meets industry best practices.",
     },
   ];
 
@@ -198,7 +198,7 @@ export const MainContentSection = ({
             <div className='flex flex-col items-start gap-5 w-full'>
               <div className='flex items-center gap-2  py-2  bg-white'>
                 
-                <span className='font-body-base-medium text-[#617f63] text-[20px] font-bold'>
+                <span className='font-body-base-medium text-[#12A16B] text-[20px] font-bold'>
                   Smarter IT. Stronger Business.
                 </span>
               </div>
@@ -218,7 +218,7 @@ export const MainContentSection = ({
 
             <div className='flex items-start gap-3'>
               <Button
-                className='px-5 py-3 bg-[#617f63] rounded-xl text-white'
+                className='px-5 py-3 bg-[#12A16B] rounded-xl text-white'
                 onClick={() => handleNavClick('Our Services')}
               >
                 Explore Our Services
@@ -230,7 +230,7 @@ export const MainContentSection = ({
           {/* Right Side: id=2 */}
           <div
             id="2"
-            className='relative w-full h-[450px] bg-[#617f63 ] rounded-3xl overflow-hidden border border-solid border-[#f5f6f9] flex-1'
+            className='relative w-full h-[450px] bg-[#12A16B ] rounded-3xl overflow-hidden border border-solid border-[#f5f6f9] flex-1'
           >
             <div className='absolute w-full h-[450px] top-0 left-0 bg-[#6099f7] overflow-hidden'>
            
@@ -287,7 +287,7 @@ export const MainContentSection = ({
               {featureCards.map((card, index) => (
                 <Card
                   key={index}
-                  className='flex-1 min-w-[360px] border border-solid border-[#617f63]  bg-white'
+                  className='flex-1 min-w-[360px] border border-solid border-[#12A16B]  bg-white'
                 >
                   <CardContent className='flex flex-col items-start gap-2 px-5 py-4'>
                     <div className='flex items-start gap-3 w-full'>
@@ -381,7 +381,7 @@ export const MainContentSection = ({
       {/* Our Services Section */}
       <section
         ref={ourServicesRef}
-        className='flex flex-col items-center gap-[60px] pt-12 pb-28 px-8 w-full bg-[#617f63]'
+        className='flex flex-col items-center gap-[60px] pt-12 pb-28 px-8 w-full bg-[#12A16B]'
       >
         <div className='flex flex-col  gap-[60px] w-full max-w-[1204px]'>
           <div className='max-w-[800px] w-full flex flex-col items-center gap-8'>
@@ -400,7 +400,7 @@ export const MainContentSection = ({
               {featureCard1s.map((card, index) => (
                 <Card
                   key={index}
-                  className='flex-1 min-w-[360px] min-h-[150px] border border-solid border-[#617f63] rounded-xl'
+                  className='flex-1 min-w-[360px] min-h-[150px] border border-solid border-[#12A16B] rounded-xl'
                 >
                   <CardContent className='flex flex-col items-start gap-2 px-5 py-4'>
                     <div className='flex items-start gap-3 w-full'>
@@ -438,7 +438,7 @@ export const MainContentSection = ({
                   key={index}
                   className={`flex-1 min-w-[292px]  rounded-xl border border-solid ${
                     service.highlighted
-                      ? 'border-[#617f63 ]'
+                      ? 'border-[#12A16B ]'
                       : 'border-[#b6bbcd]'
                   }`}
                 >
@@ -470,19 +470,17 @@ export const MainContentSection = ({
   <section className="relative w-full z-[3]"  ref={keyFeaturesRef}>
       <div className="flex flex-col md:flex-row w-full">
         {/* Left side - How we work */}
-        <div className="w-full md:w-1/2 bg-[#d4f8ff] p-8 md:p-16 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 bg-[#7dc2a7ff] p-8 md:p-16 flex flex-col justify-center">
           <h2 className="font-bold text-modmathblack text-4xl tracking-[-0.14px] leading-[46.1px] mb-8">
         How we work
           </h2>
 
           <p className="text-modmathblack text-xl tracking-[-0.20px] leading-7 font-normal mb-12 max-w-[530px]">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry&#39;s standard dummy
-        text ever since the 1500s, when an unknown
+       At Aloka Software, we believe in a structured yet flexible approach to delivering technology solutions that align with your business goals. Our process ensures clarity, efficiency, and measurable results.
           </p>
 
-          <Button className="w-32 h-10     px-5 py-3 bg-[#617f63] rounded-xl text-white">
-        <span className="ml-2  " >Lorem Has</span>
+          <Button className="w-32 h-10     px-5 py-3 bg-[#12A16B] rounded-xl text-white">
+        <span className="ml-2  " >Key Features</span>
         <ChevronRightIcon className="w-[11px] h-[11px] ml-2 " />
           </Button>
         </div>

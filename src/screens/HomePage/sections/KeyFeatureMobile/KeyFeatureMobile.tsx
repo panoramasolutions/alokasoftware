@@ -25,7 +25,7 @@ import future from '../../../../assets/future.png';
       icon: future,
       title: 'Data-Driven Decisions',
       description:
-        "Whether you're a startup or an enterprise, VTECHNOCLOUD scales with you. Experience robust analytics solutions that adapt to your growth.",
+        "Whether you're a startup or an enterprise, Aloka Software scales with you. Experience robust analytics solutions that adapt to your growth.",
     },
 
     {

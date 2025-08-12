@@ -7,7 +7,7 @@ import {
 import React from "react";
 import { Separator } from "../../../../components/ui/seperator";
 import logo from "../../../../assets/Alokasoftlogo.png";
-export const FooterSection = (): JSX.Element => {
+export const FooterSection = ({ handleNavClick,}): JSX.Element => {
   const [isDesktop, setIsDesktop] = React.useState(
     typeof window !== "undefined" ? window.innerWidth > 810 : true
   );
@@ -39,7 +39,7 @@ export const FooterSection = (): JSX.Element => {
       title: "Address",
       links: [
         { text: "Ven Reddy", url: "#" },
-        { text: "345 scotch creek rd,coppell,DFW,USA 75019", url: "#" },
+        { text: "345 scotch creek rd, coppell, DFW, USA 75019", url: "#" },
         { text: "E-Mail: venreddysnow@gmail.com", url: "#" },
         { text: "Company Name:alokasoftware.com", url: "#" },
         { text: "Phone: 224-228-3646", url: "#" },
@@ -121,7 +121,7 @@ export const FooterSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-around gap-[50px] px-8 py-10 relative w-full bg-[#617f63]">
+    <section className="flex flex-col items-center justify-around gap-[50px] px-8 py-10 relative w-full bg-[#12A16B]">
       <div className="flex flex-col max-w-[1204px] items-center w-full">
         <div className="flex flex-col items-start gap-[60px] pb-28 w-full">
           <div className="flex items-center gap-5 w-full">
@@ -148,7 +148,14 @@ export const FooterSection = (): JSX.Element => {
                     {column.links.map((link, linkIndex) => (
                       <span
                         key={`link-${linkIndex}`}
-                        className={`font-button-base-medium text-[#343844] tracking-[var(--button-base-medium-letter-spacing)] leading-[var(--button-base-medium-line-height)] inline-flex gap-2 text-[16px]`}
+                        className={`font-button-base-medium text-[#343844] tracking-[var(--button-base-medium-letter-spacing)] leading-[var(--button-base-medium-line-height)] inline-flex gap-2 text-[16px] ${
+    link.text === "Contact Us" ? "cursor-pointer" : ""
+  } `}
+                       
+                      onClick={ 
+                        link.text === "Contact Us" ? () => handleNavClick('Contact us')
+                      : undefined
+                      }
                       >
                         {link.icon}{"  "} {link.text}
                       </span>
@@ -171,6 +178,10 @@ export const FooterSection = (): JSX.Element => {
                         <span
                           key={`link-mobile-${linkIndex}`}
                           className="font-button-base-medium text-[#343844] tracking-[var(--button-base-medium-letter-spacing)] leading-[var(--button-base-medium-line-height)] inline-flex gap-2 text-[8px]"
+                        onClick={ 
+                        link.text === "Contact Us" ? () => handleNavClick('Contact us')
+                      : undefined
+                      }
                         >
                           {link.icon}{"  "} {link.text}
                         </span>

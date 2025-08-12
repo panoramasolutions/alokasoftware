@@ -136,7 +136,7 @@ export const FaqSection = ({ faqRef }: FaqSectionProps): JSX.Element => {
               >
                 <div className="flex items-start gap-4 pr-5">
                   <div className="flex w-1 self-stretch py-1.5">
-                    <div className="flex-1 self-stretch bg-[#617f63] rounded-sm" />
+                    <div className="flex-1 self-stretch bg-[#12A16B] rounded-sm" />
                   </div>
                   <AccordionTrigger className="py-6 hover:no-underline flex-1 text-left">
                     <h3 className="font-heading-desktop-h5-bold text-[#1c1f25] text-left">

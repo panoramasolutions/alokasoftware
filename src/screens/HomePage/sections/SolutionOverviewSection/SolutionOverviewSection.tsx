@@ -61,7 +61,7 @@ import ai from '../../../../assets/AI.png';
         icon: one,
         title: 'Business Development',
         description:
-          "Receive automated insights and recommendations tailored to your business needs. Let VTECHNOCLOUD's AI guide your strategies.",
+          "Receive automated insights and recommendations tailored to your business needs. Let Aloka Software's AI guide your strategies.",
       },
   
       {
@@ -76,12 +76,12 @@ import ai from '../../../../assets/AI.png';
       icon: deep,
       title: 'End-to-End Solutions',
       description:
-        'We provide complete IT solutions tailored to your business—from strategy and architecture to development, deployment, and ongoing support. Our core focus areas include Cloud Technologies, DevSecOps, and scalable digital infrastructure.',
+        'We deliver end-to-end IT solutions customized to your business needs — covering everything from strategy and architecture to development, deployment, and ongoing support. Our key expertise lies in Cloud Technologies, DevSecOps, and building scalable digital infrastructure.',
     },
     {
       icon: future,
       title: 'Staffing',
-      description:'We help companies scale their teams with highly skilled professionals across various technologies. Whether its short-term project support or long-term resource needs, we provide reliable talent for all the major technologies.',
+      description:'Scale smarter with our top-tier tech talent. From rapid project boosts to long-term expertise, we connect you with skilled professionals across all major technologies — when and where you need them',
     },
    
   ];

@@ -20,9 +20,13 @@ interface FormData {
   privacy: boolean;
 }
 
-const GOOGLE_FORM_URL = 'https://script.google.com/macros/s/AKfycbw1QwDMYTyB2Zhbq8LnM4Z3QTAPG1jbrE5KVv7GfcC_AutbK3BJqKePnPn2uLd8ryGO/exec';
+const GOOGLE_FORM_URL = 'https://script.google.com/macros/s/AKfycbyGg0x3qLftAqW03Of1BOREmYkZhvKdXagSGcABM1doB9mV5EAGLOVnahrpxhePoipnlQ/exec';
 
-export const ContactFormSection = (): JSX.Element => {
+interface ContactFormSectionProps {
+  contactusRef?: React.RefObject<HTMLElement>;
+}
+
+export const ContactFormSection = ({contactusRef} :ContactFormSectionProps): JSX.Element => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -32,18 +36,23 @@ export const ContactFormSection = (): JSX.Element => {
     privacy: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      const formBody = new FormData();
+      formBody.append('firstname', formData.firstName);
+      formBody.append('lastname', formData.lastName);
+      formBody.append('email', formData.email);
+      formBody.append('phone', formData.phone);
+      formBody.append('message', formData.message);
+      //formBody.append('privacy', formData.privacy ? 'Yes' : 'No');
+
       const response = await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+        body: formBody,
       });
 
       const result = await response.json();
@@ -83,23 +92,23 @@ export const ContactFormSection = (): JSX.Element => {
       icon: <img src={mail} alt="Mail" className="w-10 h-10" />,
       title: "Email",
       description: "Our friendly team is here to help.",
-      contact: "info@vtechnocloud.com",
+      contact: "venreddysnow@gmail.com",
       type: "email"
     },
 
    
     {
-      icon: <img src={phone} alt="Mail" className="w-10 h-10" />,
+      icon: <img src={phone} alt="Phone" className="w-10 h-10" />,
       title: "Phone",
       description: "Mon-Fri from 8am to 5pm.",
-      contact: "+1 (469) 427-0050",
+      contact: "224-228-3646",
       type: "phone"
     },
      {
-      icon: <img src={office} alt="Mail" className="w-10 h-10" />,
+      icon: <img src={office} alt="Office" className="w-10 h-10" />,
       title: "Office",
       description: "Come say hello at our office HQ.",
-      contact: "VTECHNOCLOUD SOLUTIONS INC. \n1550 WATERS RIDGE DR BLDG1 STE 300 \n LEWISVILLE, TX 75057",
+      contact: "Aloka Software. \n3345 Scotch Creek Road Coppell, DFW 75019, U.S.A.",
       type: "address"
     },
   ];
@@ -108,7 +117,7 @@ export const ContactFormSection = (): JSX.Element => {
     <section className="flex flex-col items-center w-full py-8 px-8 bg-white"  style={{
                
                   paddingTop: window.innerWidth < 640 ? "0rem" : "2rem",
-                }}>
+                }} ref={contactusRef}>
       <div className="flex flex-col items-center gap-32 max-w-[1204px] w-full">
         {/* Header Section */}
        
@@ -133,7 +142,7 @@ export const ContactFormSection = (): JSX.Element => {
                   fontWeight: "bold",
                   fontFamily: "inherit"
                 }}>
-                Get in touch
+                Get in Touch
               </h1>
               <h2 className="font-heading-desktop-h2-bold text-[#343844] text-[20px]  sm:text-[16px] "
               style={{
@@ -145,7 +154,7 @@ export const ContactFormSection = (): JSX.Element => {
             We’d love to hear from you. Please fill out this form.
               </h2>
               
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <form action={GOOGLE_FORM_URL}  method="POST"  target="hidden_iframe"  onSubmit={() => setFormSubmitted(true)}  className="flex flex-col gap-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
                     <label className="font-body-base-medium text-[#343844]">
@@ -158,7 +167,7 @@ export const ContactFormSection = (): JSX.Element => {
                       onChange={handleChange}
                       placeholder="First name"
                       required
-                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#12A16B] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -172,7 +181,7 @@ export const ContactFormSection = (): JSX.Element => {
                       onChange={handleChange}
                       placeholder="Last name"
                       required
-                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                      className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#12A16B] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -188,7 +197,7 @@ export const ContactFormSection = (): JSX.Element => {
                     onChange={handleChange}
                     placeholder="you@company.com"
                     required
-                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#12A16B] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                   />
                 </div>
 
@@ -203,7 +212,7 @@ export const ContactFormSection = (): JSX.Element => {
                     onChange={handleChange}
                     placeholder="+1 (555) 000-0000"
                     required
-                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
+                    className="h-12 px-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#12A16B] focus:ring-1 focus:ring-[#387ff5] focus:outline-none"
                   />
                 </div>
 
@@ -218,7 +227,7 @@ export const ContactFormSection = (): JSX.Element => {
                     placeholder="Tell us about your project..."
                     required
                     rows={4}
-                    className="p-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#617f63] focus:ring-1 focus:ring-[#387ff5] focus:outline-none resize-none"
+                    className="p-4 border border-[#d0d5dd] rounded-lg bg-white font-body-base-regular text-[#101828] placeholder:text-[#667085] focus:border-[#12A16B] focus:ring-1 focus:ring-[#387ff5] focus:outline-none resize-none"
                   />
                 </div>
 
@@ -230,11 +239,11 @@ export const ContactFormSection = (): JSX.Element => {
                     checked={formData.privacy}
                     onChange={handleChange}
                     required
-                    className="w-4 h-4 mt-1 border border-[#d0d5dd] rounded bg-white checked:bg-[#617f63 ] checked:border-[#617f63] focus:ring-1 focus:ring-[#617f63]"
+                    className="w-4 h-4 mt-1 border border-[#d0d5dd] rounded bg-white checked:bg-[#12A16B ] checked:border-[#12A16B] focus:ring-1 focus:ring-[#12A16B]"
                   />
                   <label htmlFor="privacy" className="font-body-base-regular text-[#667085]">
                     You agree to our friendly{" "}
-                    <a href="#" className="underline text-[#617f63]">
+                    <a href="#" className="underline text-[#12A16B]">
                       privacy policy
                     </a>
                     .
@@ -244,11 +253,30 @@ export const ContactFormSection = (): JSX.Element => {
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-12 bg-[#617f63] text-white rounded-lg font-button-base-bold hover:bg-[#617f63 ]/90 disabled:opacity-50"
+                  className="w-full h-12 bg-[#12A16B] text-white rounded-lg font-button-base-bold hover:bg-[#12A16B ]/90 disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send message"}
                 </Button>
               </form>
+              <iframe
+  name="hidden_iframe"
+  id="hidden_iframe"
+  style={{ display: 'none' }}
+  onLoad={() => {
+    if (formSubmitted) {
+      toast.success("Message sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+        privacy: false,
+      });
+      setFormSubmitted(false);
+    }
+  }}
+></iframe>
             </div>
           </div>
 
@@ -265,16 +293,7 @@ export const ContactFormSection = (): JSX.Element => {
               >
                 We’d love to hear from you
               </h1>
-              <h2 className="font-heading-desktop-h3-bold text-[#343844]  text-[20px]"
-               style={{
-               
-                  fontSize: window.innerWidth < 640 ? "14px" : "20px",
-                   fontWeight: "400",
-                }}
-              
-              >
-             Need something cleared up? Here are our most frequently asked questions.
-              </h2>
+             
               </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {contactInfo.map((info, index) => (
@@ -292,17 +311,17 @@ export const ContactFormSection = (): JSX.Element => {
                       {info.description}
                     </p>
                     {info.type === 'email' && (
-                      <a href={`mailto:${info.contact}`} className="font-body-base-semibold text-[#617f63]">
+                      <a href={`mailto:${info.contact}`} className="font-body-base-semibold text-[#12A16B]">
                         {info.contact}
                       </a>
                     )}
                     {info.type === 'phone' && (
-                      <a href={`tel:${info.contact}`} className="font-body-base-semibold text-[#617f63]">
+                      <a  className="font-body-base-semibold text-[#12A16B]">
                         {info.contact}
                       </a>
                     )}
                     {info.type === 'address' && (
-                      <address className="font-body-base-semibold text-[#617f63] not-italic whitespace-pre-line text-[12px]">
+                      <address className="font-body-base-semibold text-[#12A16B] not-italic whitespace-pre-line text-[12px]">
                         {info.contact}
                       </address>
                     )}

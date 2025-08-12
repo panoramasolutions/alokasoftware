@@ -65,14 +65,14 @@ import ava from '../../../../assets/ava.png';
     },
     {
       quote:
-        "Financial forecasting is complex, but VTECHNOCLOUD has simplified it for us. Its predictive analytics are second to none.",
+        "Financial forecasting is complex, but Aloka Software has simplified it for us. Its predictive analytics are second to none.",
       name: "Ethan West",
       title: "Chief Financial Officer",
       avatarSrc: ava,
     },
     {
       quote:
-        "The seamless integrations and customizable dashboards make VTECHNOCLOUD an indispensable tool for our business.",
+        "The seamless integrations and customizable dashboards make Aloka Software an indispensable tool for our business.",
       name: "Riley Dawson",
       title: "CTO",
       avatarSrc: ava,
@@ -158,7 +158,7 @@ export const TestimonialCarouselSection = ({ testimonialRef }: TestimonialSectio
               >
                 <Card className={`
                   h-[400px] rounded-[20px] border border-solid border-[#b6bbcd] backdrop-blur-2xl
-                  ${isDesktop ? 'bg-[#617f63]' : 'bg-[#617f63]'}
+                  ${isDesktop ? 'bg-[#12A16B]' : 'bg-[#12A16B]'}
                 `}>
                   <CardContent className={`
                     flex flex-col items-center h-full gap-5
