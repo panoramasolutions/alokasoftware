@@ -3,7 +3,7 @@
   "homepage": "https://panoramasolutions/alokasoftware.git",
   "source": "./index.html",
   "type": "module",
-  "name": "alokasoft",
+  "name": "alokasoftware",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

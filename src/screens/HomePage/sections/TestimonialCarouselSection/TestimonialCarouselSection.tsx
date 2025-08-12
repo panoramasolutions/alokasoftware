@@ -134,7 +134,7 @@ export const TestimonialCarouselSection = ({ testimonialRef }: TestimonialSectio
               max-w-[820px] w-full text-center opacity-80 font-body-base-regular
               ${isDesktop ? 'text-[#343844] px-5' : 'text-[#4b5162]'}
             `}>
-              At AlokaSoft, we pride ourselves on delivering top-notch
+              At AlokaSoftware, we pride ourselves on delivering top-notch
               technology goals. But don't just take our word for it. Hear what
               our satisfied users have to say.
             </p>

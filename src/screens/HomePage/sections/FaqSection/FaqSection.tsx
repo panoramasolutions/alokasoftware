@@ -111,7 +111,7 @@ export const FaqSection = ({ faqRef }: FaqSectionProps): JSX.Element => {
 
             <p className="opacity-80 font-body-base-regular text-[#4b5162] pr-6">
               Explore our frequently asked questions to learn more about
-              AlokaSoft&apos;s features, security, integration capabilities, and more
+              AlokaSoftware&apos;s features, security, integration capabilities, and more
             </p>
           </div>
         </div>

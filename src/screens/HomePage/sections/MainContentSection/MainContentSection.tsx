@@ -143,7 +143,7 @@ export const MainContentSection = ({
       icon: one,
       title: 'Business Development',
       description:
-        "Receive automated insights and recommendations tailored to your business needs. Let Alokasoft's AI guide your strategies.",
+        "Receive automated insights and recommendations tailored to your business needs. Let Alokasoftware's AI guide your strategies.",
     },
 
     {
@@ -272,7 +272,7 @@ export const MainContentSection = ({
 
               <div className='flex max-w-[820px] items-center px-5 py-0 mx-[-150px]'>
                 <p className='flex-1 opacity-80 font-body-base-regular text-[#343844] text-center'>
-                  At AlokaSoft, we blend deep technical expertise with
+                  At AlokaSoftware, we blend deep technical expertise with
                   forward-looking vision to help businesses thrive in the
                   digital era. With a rich history in delivering AI-driven,
                   cloud-first, and data-centric platforms, we specialize in

@@ -69,7 +69,7 @@ export const ValuePropositionSection = ({aboutusRef}): JSX.Element => {
             </h2>
 
             <p className="max-w-[820px] w-full opacity-80 font-body-base-regular font-[number:var(--body-base-regular-font-weight)] text-[#4b5162] text-[length:var(--body-base-regular-font-size)] text-center tracking-[var(--body-base-regular-letter-spacing)] leading-[var(--body-base-regular-line-height)] [font-style:var(--body-base-regular-font-style)] px-5">
-             At AlokaSoft, we blend deep technical expertise with forward-looking vision to help businesses thrive in the digital era. With a rich history in delivering AI-driven, cloud-first, and data-centric platforms, we specialize in bespoke solutions that are robust, scalable, and secure.
+             At AlokaSoftware, we blend deep technical expertise with forward-looking vision to help businesses thrive in the digital era. With a rich history in delivering AI-driven, cloud-first, and data-centric platforms, we specialize in bespoke solutions that are robust, scalable, and secure.
             </p>
           </div>
 

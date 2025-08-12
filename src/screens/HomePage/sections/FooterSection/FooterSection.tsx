@@ -88,8 +88,8 @@ export const FooterSection = ({ handleNavClick,}): JSX.Element => {
 
   const footerCategoriesMobile = [
     {
-      title: "About AlokaSoft",
-      links: ["Address:","AlokaSoft ","SOLUTIONS ","INC.","1550 WATERS RIDGE", "DR BLDG1", "STE 300 LEWISVILLE, TX 75057","Email:","info@AlokaSoft.com","Phone:", "+1 (469) 427-0751",],
+      title: "About AlokaSoftware",
+      links: ["Address:","AlokaSoftware ","SOLUTIONS ","INC.","3345 Scotch Creek Road Coppell, DFW 75019, U.S.A.","Email:","venreddysnow@gmail.com","Phone:", "224-228-3646",],
     },
     {
       title: "Resources",
@@ -198,7 +198,7 @@ export const FooterSection = ({ handleNavClick,}): JSX.Element => {
         <Separator className="w-full h-px" />
         <footer className="flex flex-wrap items-center justify-center gap-6 py-5 w-full">
           <div className="flex-1 font-body-sm-regular text-[#343844] text-[length:var(--body-sm-regular-font-size)] tracking-[var(--body-sm-regular-letter-spacing)] leading-[var(--body-sm-regular-line-height)]">
-            ©2025 AlokaSoft · All rights reserved.
+            ©2025 AlokaSoftware · All rights reserved.
           </div>
         
         </footer>
