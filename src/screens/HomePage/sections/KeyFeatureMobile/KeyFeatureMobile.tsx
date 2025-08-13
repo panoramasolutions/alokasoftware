@@ -6,7 +6,12 @@ import { Card, CardContent, CardFooter } from "../../../../components/ui/card";
 import ai from '../../../../assets/AI.png';
 import deep from '../../../../assets/deep.png';
 import future from '../../../../assets/future.png';
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../../../components/ui/accordion";
 
   const solutionCards = [
     {
@@ -38,100 +43,79 @@ import future from '../../../../assets/future.png';
    
   ];
 
+    const features = [
+    {
+      title: "Discovery & Understanding",
+      description:
+        "We begin by listening. Our team works closely with you to understand your business objectives, challenges, existing systems, and expectations. This forms the foundation for crafting tailored solutions.",
+    },
+    {
+      title: "Strategy & Roadmap",
+      description:
+        "Based on our findings, we design a detailed project plan and technology roadmap. This includes timelines, milestones, resource allocation, and a clear cost structure, ensuring transparency from day one.",
+    },
+    {
+      title: "Design & Development",
+      description:
+        "Our experts create intuitive designs and robust system architectures. Development follows agile methodologies, allowing us to adapt quickly to feedback and evolving needs.",
+    },
+    {
+      title: "Testing & Quality Assurance",
+      description:
+        "We rigorously test every solution for performance, security, and scalability. Our QA process ensures that the final product is stable, secure, and meets industry best practices.",
+    },
+  ];
+
 export const KeyFeatureMobile = ({keyFeaturesRef}): JSX.Element => {
   return (
-   <section className="flex flex-col items-center gap-[60px] pt-12 pb-0 px-5 sm:px-8 w-full bg-white" ref={keyFeaturesRef}>
-      <div className="flex flex-col max-w-[1204px] items-center gap-[60px] w-full">
-        {/* Header */}
-        <header className="flex flex-col max-w-[800px] items-center gap-8 w-full">
-          <div className="flex flex-col items-center gap-4 w-full">
-            <Badge
-              className="flex items-center gap-2 px-3 py-2 bg-white rounded-[20px] border border-solid border-[#b6bbcd] shadow-shadow-to-bot-neutral-1"
-              variant="outline"
-            >
-              <div className="relative w-5 h-5">
-                {/* Desktop/Tablet icon */}
-                <img
-                  className="absolute w-[18px] h-[17px] top-0.5 left-px sm:block hidden"
-                  alt="Vector"
-                  src={ai}
-                />
-                {/* Mobile icon */}
-                <img
-                  className="absolute w-[18px] h-[17px] top-0.5 left-px sm:hidden block"
-                  alt="Vector"
-                  src={ai}
-                />
+   <section className="relative w-full z-[3]"  ref={keyFeaturesRef}>
+      <div className="flex flex-col md:flex-row w-full">
+        {/* Left side - How we work */}
+        <div className="w-full md:w-1/2 bg-[#7dc2a7ff] p-8 md:p-16 flex flex-col justify-center">
+          <h2 className="font-bold text-modmathblack text-4xl tracking-[-0.14px] leading-[46.1px] mb-8 text-[16px]">
+        How we work
+          </h2>
+
+          <p className="text-modmathblack  tracking-[-0.20px] leading-7 font-normal mb-12 max-w-[530px] text-[16px]">
+       At Aloka Software, we believe in a structured yet flexible approach to delivering technology solutions that align with your business goals. Our process ensures clarity, efficiency, and measurable results.
+          </p>
+
+          <Button className="w-32 h-10     px-5 py-3 bg-[#12A16B] rounded-xl text-white">
+        <span className="ml-2 text-[16px]" >Key Features</span>
+        <ChevronRightIcon className="w-[11px] h-[11px] ml-2 " />
+          </Button>
+        </div>
+
+        {/* Right side - Features */}
+        <div className="w-full md:w-1/2 bg-[#F5F7FA] p-8 md:p-16 flex flex-col justify-center">
+          <h3 className="font-bold text-modmathblack text-2xl mb-8 text-[16px]">
+        Features
+          </h3>
+
+          <Card className="border-none shadow-none bg-transparent">
+        <CardContent className="p-0">
+          <Accordion type="single" collapsible className="w-full">
+            {features.map((feature, index) => (
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="border-t border-b py-4 text-[16px]"
+          >
+            <AccordionTrigger className="hover:no-underline">
+              <div className="text-left font-medium text-modmathblack text-[16px] leading-[33.6px]">
+            {feature.title}
               </div>
-              <span className="font-body-base-medium text-[#4b5162]">
-                Key Features and Capabilities
-              </span>
-            </Badge>
-
-            <h2 className="font-heading-desktop-h2-bold text-[#1c1f25] text-center w-full">
-             What sets our solutions apart—and pushes your business forward.
-            </h2>
-
-          
-          </div>
-        </header>
-
-        {/* Cards */}
-        <div className="w-full">
-          {/* Desktop/Tablet: flex-wrap, Mobile: grid */}
-          <div className="hidden sm:flex flex-wrap justify-center gap-8 w-full pb-24 relative">
-            {solutionCards.map((card, index) => (
-              <Card
-                key={`solution-card-${index}`}
-                className="flex-1 min-w-[292px] border border-solid border-[#b6bbcd] rounded-xl"
-              >
-                <CardContent className="flex flex-col items-center gap-4 p-8">
-                  <img
-                    className="w-[65px] h-[65px] mt-[-5.09px] ml-[-30.55px]"
-                    alt={`${card.title} illustration`}
-                    src={card.icon}
-                  />
-                  <div className="flex flex-col h-[110px] items-center gap-1 w-full">
-                    <h3 className="font-heading-desktop-h5-bold text-[#1c1f25] h-7">
-                      {card.title}
-                    </h3>
-                    <p className="opacity-80 font-body-base-regular text-[#4b5162]">
-                      {card.description}
-                    </p>
-                  </div>
-                  
-                </CardContent>
-              </Card>
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="text-modmathblack text-[16px] tracking-[-0.20px] leading-7 font-normal pt-2">
+            {feature.description}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
             ))}
-            
-          </div>
-          {/* Mobile: grid */}
-          <div className="grid sm:hidden grid-cols-1 gap-8 w-full pb-12">
-            {solutionCards.map((card, index) => (
-              <Card
-                key={index}
-                className="flex flex-col min-h-[300px] border-[#b6bbcd] rounded-xl bg-white"
-              >
-                <CardContent className="flex flex-col gap-4 p-4 items-center">
-                  <img
-                    className="w-[65px] h-[65px] mt-[-5.09px] ml-[-30.55px]"
-                    alt="Component"
-                    src={card.icon}
-                  />
-                  <div className="flex flex-col h-[110px] gap-1 items-center">
-                    <h5 className="font-heading-desktop-h5-bold text-[#1c1f25] items-center">
-                      {card.title}
-                    </h5>
-                    <p className="opacity-80 font-body-base-regular text-[#4b5162] text-center">
-                      {card.description}
-                    </p>
-                  </div>
-                </CardContent>
-             
-              </Card>
-            ))}
-            
-          </div>
+          </Accordion>
+        </CardContent>
+          </Card>
         </div>
       </div>
     </section>

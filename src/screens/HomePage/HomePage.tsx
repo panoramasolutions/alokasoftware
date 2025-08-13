@@ -178,6 +178,7 @@ export const HomePage = (): JSX.Element => {
   // Mobile-specific layout
   const MobileLayout = () => (
     <div className="flex flex-col w-full items-start relative bg-white">
+       <Toaster position="top-right" />
       {commonSections.navigation}
       <main className="flex flex-col items-start pt-0 pb-[60px] px-0 relative self-stretch w-full flex-[0_0_auto] z-[1]">
         <HeroSection   handleNavClick={handleNavClick}  />
@@ -185,7 +186,7 @@ export const HomePage = (): JSX.Element => {
         <ValuePropositionSection  aboutusRef={refs.aboutUs} />
         {commonSections.testimonials}
         
-        <TrialOfferSection />
+      
         <KeyFeatureMobile  keyFeaturesRef={refs.keyFeatures}/>
         <SolutionOverviewSection  ourServicesRef={refs.ourServices} />
         <ContactFormSection  contactusRef={refs.contactus} />
